@@ -1,4 +1,3 @@
-
 print("===== WELCOME MINI STORE POS ODERING SYSTEM =====")
 
 print("--- Product Menu ---")
