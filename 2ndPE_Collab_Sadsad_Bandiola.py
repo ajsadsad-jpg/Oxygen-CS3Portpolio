@@ -1,41 +1,37 @@
 
 print("===== WELCOME MINI STORE POS ODERING SYSTEM =====")
 
+print("--- Product Menu ---")
+print("1. Burger - PHP 50.00")
+print("2. Fries - PHP 35.00")
+print("3. Soft Drink - PHP 25.00")
 
-name = input("What is your name? ")
-print("Hello, " + name + "! Welcome to the program.")
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
 
-Number = input("Please enter a number: ")
+    def get_name(self):
+        return self.name
 
-if int(Number) > 0:
-    print("You entered a positive number.")
-else:
-    print("You entered a negative number.")
+    def get_price(self):
+        return self.price
 
-    if int(Number) == 0:
-        print("You entered zero.")
+Food1 = Product("Burger", 50)
+Food2 = Product("Fries", 35)
+Food3 = Product("Soft Drink", 25)
 
-        Numberequals = input("Please enter another number: ")
+ProductNumber = input("Enter a Product Number(1-3): ")
+Quantity = input("Enter Quantity: ")
+Added = print("Added: " + str(ProductNumber) + " x " + str(Quantity))
 
-        if int(Numberequals) > int(Number):
-            if int(Numberequals) > int(Number):
-                print("The second number is greater than the first number.")
-        else:
-                    print("The second number is not greater than the first number.")
+AnotherProduct = input("Do you want to add another product? (yes/no): ")
 
-if int(Numberequals) == int(Number):
-    print("The first number is equal to the second number.")
+ProductNumber = input("Enter a Product Number(1-3): ")
+Quantity = input("Enter Quantity: ")
+Added = print("Added: " + str(ProductNumber) + " x " + str(Quantity))
 
-    score = input("Please enter your score: ")
+anotherProduct = input("Do you want to add another product? (yes/no): ")
 
-if int(score) >= 75:
-    print("Congratulations! You passed the test.")
-else:
-    print("Sorry, you did not pass the test. Better luck next time!")
+Receipt = print("===== RECEIPT MINI STORE =====")
 
-    numberoddeven = input("Please enter a number to check if it is odd or even: ")
-
-    if int(numberoddeven) % 2 == 0:
-        print("The number is even.")    
-    else:
-        print("The number is odd.")
