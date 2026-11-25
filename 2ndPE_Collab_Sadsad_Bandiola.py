@@ -10,27 +10,60 @@ class Product:
         self.name = name
         self.price = price
 
-    def get_name(self):
-        return self.name
+price1 = 50
+price2 = 35
+price3 = 25
 
-    def get_price(self):
-        return self.price
+Product1 = Product("Burger", price1)
+Product2 = Product("Fries", price2)
+Product3 = Product("Soft Drink", price3)
 
-Food1 = Product("Burger", 50)
-Food2 = Product("Fries", 35)
-Food3 = Product("Soft Drink", 25)
 
-ProductNumber = input("Enter a Product Number(1-3): ")
+ProductNumber1 = input("Enter a Product Number(1-3): ")
+ProductName = ""
+if ProductNumber1 == "1":
+    ProductName = Product1.name
+elif ProductNumber1 == "2":
+    ProductName = Product2.name
+elif ProductNumber1 == "3":
+    ProductName = Product3.name
 Quantity = input("Enter Quantity: ")
-Added = print("Added: " + str(ProductNumber) + " x " + str(Quantity))
+Added = print("Added: " + str(ProductName) + " x " + str(Quantity))
 
-AnotherProduct = input("Do you want to add another product? (yes/no): ")
-
-ProductNumber = input("Enter a Product Number(1-3): ")
+continue_ordering = input("Do you want to add another product? (yes/no): ")
+if continue_ordering.lower() == "yes":
+    ProductNumber2 = input("Enter a Product Number(1-3): ")
+ProductName = ""
+if ProductNumber2 == "1":
+    ProductName = Product1.name
+elif ProductNumber2 == "2":
+    ProductName = Product2.name
+elif ProductNumber2 == "3":
+    ProductName = Product3.name
 Quantity = input("Enter Quantity: ")
-Added = print("Added: " + str(ProductNumber) + " x " + str(Quantity))
+Added = print("Added: " + str(ProductName) + " x " + str(Quantity))
 
-anotherProduct = input("Do you want to add another product? (yes/no): ")
+continue_ordering = input("Do you want to add another product? (yes/no): ")
+if continue_ordering.lower() == "yes":
+    ProductNumber3 = input("Enter a Product Number(1-3): ")
+ProductName = ""
+if ProductNumber3 == "1":
+    ProductName = Product1.name
+elif ProductNumber3 == "2":
+    ProductName = Product2.name
+elif ProductNumber3 == "3":
+    ProductName = Product3.name
+Quantity = input("Enter Quantity: ")
+Added = print("Added: " + str(ProductName) + " x " + str(Quantity))
+
+continue_ordering = input("Do you want to add another product? (yes/no): ")
+if continue_ordering.lower() =="no":
+    print("You may proceed to get the receipt")
+
 
 Receipt = print("===== RECEIPT MINI STORE =====")
+
+print("Product   Qty    Price   Subtotal")
+print(ProductName, Quantity, price1, Quantity * price1 )
+
 
